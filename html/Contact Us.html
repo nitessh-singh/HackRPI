@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    window.watsonAssistantChatOptions = {
+        integrationID: "65692244-64b6-4492-afc0-799d689ff812", // The ID of this integration.
+        region: "eu-gb", // The region your integration is hosted in.
+        serviceInstanceID: "4108816c-78eb-48e1-bf95-acbdd927afd2", // The ID of your service instance.
+        onLoad: function(instance) { instance.render(); }
+      };
+    setTimeout(function(){
+      const t=document.createElement('script');
+      t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+      document.head.appendChild(t);
+    });
+  </script>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    
+    
+    
+    <title>Document</title>
+    <style rel="stylesheet", type="text/css">
+        #map {
+            width: 100%;
+            height: 300px;
+            border: 2px solid black;
+            background-color: black;
+        }
+
+        .contact {
+            border: 2px solid black;
+            margin-top: 10%;
+            margin-right: 30%;
+            margin-left: 20%;
+            padding: 3% 8%;
+            box-shadow: 10px 10px 10px grey;
+
+        }
+        .logo {
+         width: 5%; 
+          
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 5%;
+        }
+        h4 {
+            margin: 5%;
+        }
+    
+    </style>
+
+
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <img class="logo" src="../Static/Images/logo.png">
+    <a class="navbar-brand text-success" href="#">Envokart</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end mx-auto" id="navbarNavAltMarkup">
+      <div class="navbar-nav  ">
+        <a class="nav-link active text-success" href="../index.html">Home </a>
+        <a class="nav-link active text-success" href="../html/Schedule-pick-up.html">Schedule Pickup</a>
+        <a class="nav-link active text-success" href="../html/schedule.html">Rate Card</a>
+        <a class="nav-link active text-success" href="../html/shop.html">Shop</a>
+        <a class="nav-link active text-success" href="../html/Contact Us.html">Contact Us</a>
+        <a class="nav-link active text-success" href="#">Sign-Up/Login</a>
+      </div>
+    </div>
+  </nav>
+    <div class="contact">
+
+        <h1 class="text-success"> Contact Us</h1>
+        <div id="map">
+          
+        </div>
+
+        <div class="info">
+            <h4 class="text-success">Mail Us: envocart@envocart.com</h4>
+            <h4 class="text-success">Give Us a Call: 1234567890</h4>
+
+            <h1 class="text-success">WRITE A LINE TO US</h1>
+
+            <form>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="inputName" placeholder="Name">
+                </div>
+                <div class="form-group">
+                  
+                  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email">
+                </div>
+                
+                <div class="form-group">
+                  
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-success text-light">Send</button>
+              </form>
+        </div>
+
+    </div>
+
+    <br><br>
+    <div class="footer">
+        <div class="card">
+          
+          <div class="card-body">
+            
+            <div class="row">
+              <div class="col">
+                <h5 class="card-title text-success">Subscribe:</h5>
+                <form>
+                  <div class="form-group">
+                    
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="inputPhone" placeholder="Contact No.">
+                  </div>
+                  
+                  <button type="submit" class="btn btn-success text-light">Subscribe Now</button>
+                </form>
+              </div>
+              <div class="col middle-footer">
+                  <img class="socials" src="../Static/Images/socials.png">
+              </div>
+              <div class="col">
+                <h5 class="text-success">ABOUT US</h5>
+                <h5 class="text-success">CONTACT</h5>
+                <h5 class="text-success">PRIVACY POLICY</h5>
+                <h5 class="text-success">TERMS AND CONDITIONS</h5>
+              </div>
+            </div>
+            
+            
+          </div>
+        </div>
+      </div>
+
+    
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhRas0AgZ3w-NTLnK92w4rcrvJHZYAptQ&callback=initMap"
+    ></script>
+    
+    <!-- <script type="text/javascript">
+        x = navigator.geolocation;
+        x.getCurrentPosition(success, failure);
+    
+        function success(position) {
+            var myLat = position.coords.latitude;
+            var myLong = position.coords.longitude;
+    
+            var coords = new google.maps.LatLng(myLat, myLong);
+    
+            var mapOptions = {
+                zoom: 9,
+                center: coords,
+            
+            }
+    
+            var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+            var marker = new google.maps.Marker({
+                map: map, position:coords});
+    
+        }
+        function failure(){}
+    </script> -->
+    <script>
+
+        function initMap() {
+
+            var location = {lat: 28.704060, lng: 77.102493};
+            var map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 11,
+                center: location
+            });
+            var marker = new google.maps.Marker({
+                position: location,
+                map: map
+            });
+
+        }
+    </script> -->
+      <!-- Optional JavaScript; choose one of the two!
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    <!-- Option 2: jQuery, Popper.js, and Bootstrap JS
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    -->
+</body>
+</html>
